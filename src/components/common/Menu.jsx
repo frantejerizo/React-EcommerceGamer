@@ -1,4 +1,4 @@
-import { Button, Col, Container, Form, Nav, Navbar, Row } from "react-bootstrap";
+import { Button, Container, Form, Nav, Navbar } from "react-bootstrap";
 import { Link, NavLink } from "react-router";
 
 const Menu = () => {
@@ -15,18 +15,11 @@ const Menu = () => {
                 </Link>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav" className="d-flex justify-content-end">
-                    <Form>
-                        <Row>
-                            <Col>
-                                <Form.Control type="text" placeholder="Buscar Juego"></Form.Control>
-                            </Col>
-                            <Col>
-                                <Button type="submit" variant="success">Buscar</Button>
-                            </Col>
-                        </Row>
-                    </Form>
-
                     <Nav>
+                        <Form className="d-flex me-3">
+                            <Form.Control type="text" placeholder="Buscar Juego" style={{width:'200px'}}></Form.Control>
+                            <Button type="submit" variant="success">Buscar</Button>
+                        </Form>
                         <NavLink end className='nav-link' to={'/'}>Inicio</NavLink>
                         <NavLink end className='nav-link' to={'/acerca-de-nosotros'}>Acerca de Nosotros</NavLink>
                         <NavLink end className='nav-link' to={'/login'}>Login</NavLink>
