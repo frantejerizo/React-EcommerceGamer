@@ -2,6 +2,7 @@ import React from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { PlusCircle } from "react-bootstrap-icons";
+import AdministrarJuegos from './juego/AdministrarJuegos';
 
 const Administrador = () => {
     return (
@@ -16,7 +17,7 @@ const Administrador = () => {
       <PlusCircle></PlusCircle>
       </Button>
     </Form>
-    
+    <AdministrarJuegos/>
         </section>
     );
 };
