@@ -5,7 +5,7 @@ import slide3 from '../../../assets/Carrousel/3.png';
 
 function CarrouselInicio() {
   return (
-    <div className="mb-5">
+    <div>
     <Carousel fade>
       <Carousel.Item>
         <img
