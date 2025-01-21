@@ -2,6 +2,7 @@ import { Button, Container, Form, Nav, Navbar } from "react-bootstrap";
 import { Search } from "react-bootstrap-icons";
 import { useForm } from "react-hook-form";
 import { Link, NavLink } from "react-router";
+import logo from '../../assets/logo.png';
 
 const Menu = () => {
     const {
@@ -22,10 +23,10 @@ const Menu = () => {
             <Container>
                 <Link to={'/'} className="navbar-brand">
                     <img
-                        src=''
+                        src={logo}
                         alt="logo ecommerce gamer"
                         className="img-fluid"
-                        width={'150px'}
+                        width={'50px'}
                     />
                 </Link>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
