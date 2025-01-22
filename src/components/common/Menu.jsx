@@ -19,7 +19,7 @@ const Menu = () => {
     }
 
     return (
-        <Navbar expand="lg" className="bg-body-tertiary">
+        <Navbar expand="lg" className="colorPrimario" data-bs-theme="dark">
             <Container>
                 <Link to={'/'} className="navbar-brand">
                     <img
@@ -32,9 +32,9 @@ const Menu = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav"> 
                     <Nav className="ms-auto">
-                        <NavLink end className='nav-link' to={'/'}>Inicio</NavLink>
-                        <NavLink end className='nav-link' to={'/acerca-de-nosotros'}>Acerca de Nosotros</NavLink>
-                        <NavLink end className='nav-link me-3' to={'/login'}>Login</NavLink>
+                        <NavLink end className='nav-link link-success' to={'/'}>Inicio</NavLink>
+                        <NavLink end className='nav-link link-success' to={'/acerca-de-nosotros'}>Acerca de Nosotros</NavLink>
+                        <NavLink end className='nav-link me-3 link-success' to={'/login'}>Login</NavLink>
 
                         <Form className="d-flex" onSubmit={handleSubmit(onSubmit)}>
                             <Form.Group>
