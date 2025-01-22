@@ -2,13 +2,14 @@ import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { Facebook, Instagram, Twitter } from 'react-bootstrap-icons';
 import { Link } from 'react-router';
+import logo from '../../assets/logo.png';
 
 const Footer = () => {
     return (
         <footer className='bg-secondary-subtle'>
             <section className='p-4 container'>
                 <Row>
-                    <Col md={4} className='d-flex justify-content-center'><img src="" alt="logo footer ecommerce gamer"/></Col>
+                    <Col md={4} className='d-flex justify-content-center align-items-center'><img src={logo} alt="logo footer ecommerce gamer" width="80px"/></Col>
                     <Col md={4} className='d-flex flex-column py-3 py-md-0'>
                         <h5>Navegación</h5>
                         <Link to={'/'} className="lead link-dark link-underline-opacity-0 link-underline-opacity-100-hover">Inicio</Link>
@@ -33,7 +34,7 @@ const Footer = () => {
                 </Row>
             </section>
             <section className="text-center py-1 text-light bg-secondary">
-                <p className='m-0'>Ecommerce Gamer 2025 &copy; Todos los derechos reservados</p>
+                <p className='m-0'>PlayZone 2025 &copy; Todos los derechos reservados</p>
             </section>
         </footer>
     );

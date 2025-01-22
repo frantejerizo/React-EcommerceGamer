@@ -11,6 +11,7 @@ import DetalleJuego from './components/pages/DetalleJuego'
 import Error404 from './components/pages/Error404'
 import FormularioJuegos from './components/pages/FormularioJuegos'
 
+
 function App() {
   return (
     <>
