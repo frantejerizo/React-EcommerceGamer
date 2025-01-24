@@ -3,6 +3,7 @@ import slide1 from '../../../assets/Carrousel/1.png';
 import slide2 from '../../../assets/Carrousel/2.png';
 import slide3 from '../../../assets/Carrousel/3.png';
 
+
 function CarrouselInicio() {
   return (
     <div>
@@ -36,5 +37,6 @@ function CarrouselInicio() {
     </div>
   );
 }
+
 
 export default CarrouselInicio;
