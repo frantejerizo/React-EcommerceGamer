@@ -1,7 +1,7 @@
 export const crearJuegoAPI = async(juegoNuevo) =>{
     try
     {
-        const respuesta = await fetch(`http://localhost:3000/juegos`,{
+        const respuesta = await fetch(`http://localhost:5173/juegos`,{
             method:"POST",
             headers:{
                 "Content-Type": "application/json"
@@ -20,12 +20,16 @@ export const crearJuegoAPI = async(juegoNuevo) =>{
 export const obtenerUnSoloJuegoAPI = async(id) =>{
     try
     {
-        const respuesta = await fetch(`http://localhost:3000/juegos/${id}`)
+        const respuesta = await fetch(`http://localhost:5173/juegos/${id}`)
+        if (respuesta.ok) {
+            const datos = await respuesta.json();
+            setVideojuegos(datos);
+        }
         return respuesta
     }
     catch (error)
     {
-        console.error(error)
+        
         return false
     }
 }
@@ -33,7 +37,7 @@ export const obtenerUnSoloJuegoAPI = async(id) =>{
 export const editarJuegoAPI = async(juegoAEditar,id) =>{
     try
     {
-        const respuesta = await fetch(`http://localhost:3000/juegos/${id}`,{
+        const respuesta = await fetch(`http://localhost:5173/juegos/${id}`,{
             method:"PUT",
             headers:{
                 "Content-Type": "application/json"
@@ -48,3 +52,18 @@ export const editarJuegoAPI = async(juegoAEditar,id) =>{
         return false
     }
 }
+
+export const borrarJuegoAPI = async (id) => {
+    try {
+        
+        const respuesta = await fetch(`http://localhost:5173/juegos/${id}`, {
+            method: "DELETE",
+        });
+
+       
+        return respuesta;
+    } catch (error) {
+        console.error("Error al eliminar el videojuego:", error);
+        return false; 
+    }
+};
