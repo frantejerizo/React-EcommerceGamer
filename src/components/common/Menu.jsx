@@ -3,6 +3,7 @@ import { Search } from "react-bootstrap-icons";
 import { useForm } from "react-hook-form";
 import { Link, NavLink } from "react-router";
 import logo from '../../assets/logo.png';
+import './common.css';
 
 const Menu = () => {
     const {
@@ -19,7 +20,7 @@ const Menu = () => {
     }
 
     return (
-        <Navbar expand="lg" className="colorPrimario" data-bs-theme="dark">
+        <Navbar expand="lg" className="colorPrimario bg-blanco" data-bs-theme="dark">
             <Container>
                 <Link to={'/'} className="navbar-brand">
                     <img
@@ -31,10 +32,10 @@ const Menu = () => {
                 </Link>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav"> 
-                    <Nav className="ms-auto">
-                        <NavLink end className='nav-link link-success' to={'/'}>Inicio</NavLink>
-                        <NavLink end className='nav-link link-success' to={'/acerca-de-nosotros'}>Acerca de Nosotros</NavLink>
-                        <NavLink end className='nav-link me-3 link-success' to={'/login'}>Login</NavLink>
+                    <Nav className="ms-auto boton-blanco">
+                        <NavLink end className='nav-link link-success ' to={'/'}>Inicio</NavLink>
+                        <NavLink end className='nav-link link-success ' to={'/acerca-de-nosotros'}>Acerca de Nosotros</NavLink>
+                        <NavLink end className='nav-link me-3 link-success ' to={'/login'}>Login</NavLink>
 
                         <Form className="d-flex" onSubmit={handleSubmit(onSubmit)}>
                             <Form.Group>

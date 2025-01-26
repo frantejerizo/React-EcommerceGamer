@@ -16,6 +16,15 @@
     background-color: var(--bg-card);
     border-radius: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.5s ease; /* Transición más gradual */
+  overflow: hidden; /* Evita que el contenido se desborde */
+  transform-origin: center; 
+  }
+
+  .card:hover {
+    transform: scale(1.03); /* Expande la card un 3% (más sutil) */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
+    z-index: 1;
   }
   
   .image_container {
@@ -85,3 +94,4 @@
   .cart-icon {
     width: 1rem;
   }
+

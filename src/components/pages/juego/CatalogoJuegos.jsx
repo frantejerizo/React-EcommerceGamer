@@ -3,6 +3,7 @@ import JuegoInicio from "./JuegoInicio";
 import { useEffect, useState } from "react";
 import { listarProductosAPI } from "../../helpers/queries";
 import Banner from "../../../assets/banner.png";
+import "./CatalogoJuegos.css";
 
 const CatalogoJuegos = () => {
   const [listaProductos, setListaProductos] = useState([]);
@@ -26,7 +27,7 @@ const CatalogoJuegos = () => {
   };
 
   return (
-    <section className="mainSection d-flex flex-column align-items-center">
+    <section className="mainSection d-flex flex-column align-items-center ">
       {/* Banner */}
       <img className="banner m-2 w-100" src={Banner} alt="Banner Catalogo" />
 
@@ -37,7 +38,7 @@ const CatalogoJuegos = () => {
         <hr />
 
         {/* Fila para las cards */}
-        <Row xs={1} sm={2} md={3} lg={4} className="g-4">
+        <Row xs={1} sm={2} md={3} lg={4} className="g-4 container-catalogo">
           {listaProductos.map((juego) => (
             <Col key={juego.id}>
               <JuegoInicio juego={juego} />

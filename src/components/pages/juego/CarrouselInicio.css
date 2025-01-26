@@ -1,12 +1,11 @@
 
 .carrousel-container {
-    margin-bottom: 2rem; 
     background-color: #08152e; 
   }
   
 
   .carrousel-image {
-    max-height: 500px; 
+    max-height: 100vh; 
     width: 100%; 
     object-fit: contain; 
     background-color: #08152e; 
