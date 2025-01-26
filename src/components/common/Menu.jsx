@@ -32,12 +32,12 @@ const Menu = () => {
                 </Link>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav"> 
-                    <Nav className="ms-auto boton-blanco">
+                    <Nav className="ms-auto">
                         <NavLink end className='nav-link link-success ' to={'/'}>Inicio</NavLink>
-                        <NavLink end className='nav-link link-success ' to={'/acerca-de-nosotros'}>Acerca de Nosotros</NavLink>
-                        <NavLink end className='nav-link me-3 link-success ' to={'/login'}>Login</NavLink>
+                        <NavLink end className='nav-link link-success ms-1 ' to={'/acerca-de-nosotros'}>Sobre Nosotros</NavLink>
+                        <NavLink end className='nav-link me-3 link-success ms-1 ' to={'/login'}>Login</NavLink>
 
-                        <Form className="d-flex" onSubmit={handleSubmit(onSubmit)}>
+                        <Form className="d-flex mt-1" onSubmit={handleSubmit(onSubmit)}>
                             <Form.Group>
                                 <Form.Control type="text" placeholder="Buscar Juego" {...register('busquedaJuego',{
                                     required: 'Ingresa algun juego para buscarlo',
