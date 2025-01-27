@@ -1,61 +1,58 @@
 .container-catalogo {
-    /* Basic dimensions and centering */
-    width: 100%; /* Ocupa el 100% del ancho disponible */
-    max-width: 1200px; /* Limita el ancho máximo para pantallas grandes */
-    margin: 20px auto; /* Centra el contenedor horizontalmente */
-    margin-bottom: 50px;
-    padding: 10px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap; /* Permite que los elementos internos se ajusten en varias filas */
-    gap: 10px; /* Espacio entre los elementos internos */
-  
-    width: 100%;
-    height: 100%;
-    --s: 82px;
-    --c1: #b2b2b2;
-    --c2: #ffffff;
-    --c3: #d9d9d9;
-  
-    --_g: var(--c3) 0 120deg, #0000 0;
-    background: conic-gradient(from -60deg at 50% calc(100% / 3), var(--_g)),
-      conic-gradient(from 120deg at 50% calc(200% / 3), var(--_g)),
-      conic-gradient(
-        from 60deg at calc(200% / 3),
-        var(--c3) 60deg,
-        var(--c2) 0 120deg,
-        #0000 0
-      ),
-      conic-gradient(from 180deg at calc(100% / 3), var(--c1) 60deg, var(--_g)),
-      linear-gradient(
-        90deg,
-        var(--c1) calc(100% / 6),
-        var(--c2) 0 50%,
-        var(--c1) 0 calc(500% / 6),
-        var(--c2) 0
-      );
-    background-size: calc(1.732 * var(--s)) var(--s);
-  }
-    
+  /* Basic dimensions and centering */
+  width: 100%; /* Ocupa el 100% del ancho disponible */
+  max-width: 1200px; /* Limita el ancho máximo para pantallas grandes */
+  margin: 20px auto; /* Centra el contenedor horizontalmente */
+  margin-bottom: 50px;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Permite que los elementos internos se ajusten en varias filas */
+  gap: 10px; /* Espacio entre los elementos internos */
 
-  /* Media Queries para ajustes responsivos */
+  width: 100%;
+  height: 100%;
+  --s: 82px;
+  --c1: #b2b2b2;
+  --c2: #ffffff;
+  --c3: #d9d9d9;
+
+  --_g: var(--c3) 0 120deg, #0000 0;
+  background: conic-gradient(from -60deg at 50% calc(100% / 3), var(--_g)),
+    conic-gradient(from 120deg at 50% calc(200% / 3), var(--_g)),
+    conic-gradient(
+      from 60deg at calc(200% / 3),
+      var(--c3) 60deg,
+      var(--c2) 0 120deg,
+      #0000 0
+    ),
+    conic-gradient(from 180deg at calc(100% / 3), var(--c1) 60deg, var(--_g)),
+    linear-gradient(
+      90deg,
+      var(--c1) calc(100% / 6),
+      var(--c2) 0 50%,
+      var(--c1) 0 calc(500% / 6),
+      var(--c2) 0
+    );
+  background-size: calc(1.732 * var(--s)) var(--s);
+}
+
+/* Media Queries para ajustes responsivos */
 @media (max-width: 768px) {
-    .container-catalogo {
-      padding: 5px; /* Reducir el padding en pantallas pequeñas */
-      gap: 5px; /* Reducir el espacio entre elementos */
-      justify-content: center;
-      
-    }
+  .container-catalogo {
+    padding: 5px; /* Reducir el padding en pantallas pequeñas */
+    gap: 5px; /* Reducir el espacio entre elementos */
+    justify-content: center;
   }
-  
-  @media (max-width: 480px) {
-    .container-catalogo {
-      margin: 5px auto; /* Reducir el margen en pantallas muy pequeñas */
-      padding: 5px;
-      gap: 5px;
-      justify-content: center;
-      
-    }
+}
+
+@media (max-width: 480px) {
+  .container-catalogo {
+    margin: 5px auto; /* Reducir el margen en pantallas muy pequeñas */
+    padding: 5px;
+    gap: 5px;
+    justify-content: center;
   }
+}

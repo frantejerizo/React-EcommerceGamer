@@ -25,10 +25,10 @@ const Login = ({ setUsuarioLogueado }) => {
 
   return (
     <section className="mainSection align-content-center">
-      <Container className="w-75">
+      <Container>
         <Card>
           <Card.Body>
-            <div className="justify-content-center d-flex">
+            <div>
               <Card.Title>Login</Card.Title>
             </div>
             <Form onSubmit={handleSubmit(onSubmit)}>

@@ -81,3 +81,23 @@ export const editarJuegoAPI = async(juegoAEditar,id) =>{
         return false
     }
 }
+
+// usuario administrador
+const userAdmin = {
+    email: 'admin@gmail.com',
+    password: '12345678'
+}
+
+export const login = (usuario) =>
+{
+    if(usuario.email === userAdmin.email && usuario.password === userAdmin.password) 
+    {
+        // guardamos el email en el session storage para que no se desloguee navegando de pagina en pagina
+        sessionStorage.setItem('userKey',JSON.stringify(userAdmin.email))
+        return true
+    }
+    else
+    {
+        return false
+    }
+}
