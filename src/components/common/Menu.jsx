@@ -13,6 +13,8 @@ const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
     reset,
     setValue,
   } = useForm();
+  
+  const navegacion = useNavigate()
 
   const onSubmit = (busqueda) => {
     console.log(busqueda);

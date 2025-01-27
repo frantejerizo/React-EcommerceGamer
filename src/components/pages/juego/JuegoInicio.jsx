@@ -4,7 +4,7 @@ import { Link } from "react-router";
 
 const JuegoInicio = ({ juego }) => {
   return (
-    <div className="card">
+    <div className="cardInicio">
       <div className="image_container">
         <img
           src={juego.imagen}

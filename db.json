@@ -4,12 +4,23 @@
       "nombre": "Dark Souls III",
       "precio": "25000",
       "categoria": "SoulsLike",
-      "imagen": "https://pics.filmaffinity.com/300-177205452-large.jpg",
+      "imagen": "https://upload.wikimedia.org/wikipedia/en/b/bb/Dark_souls_3_cover_art.jpg",
       "descripcion": "Dark Souls III es un juego de rol de acción de 2016 desarrollado por FromSoftware y publicado por Bandai Namco Entertainment para PlayStation 4, Xbox One y PC. Tercera y última entrega de la saga Dark Souls, se juega en una perspectiva en tercera persona, y los jugadores tienen acceso a varias armas, armaduras, magia y consumibles que pueden usar para luchar contra sus enemigos. Hidetaka Miyazaki, el creador de la saga, volvió para dirigir el juego tras dejar las tareas de desarrollo de Dark Souls II en manos de otros.",
       "requisitosMinimos": "SO *: Windows 7 SP1 64bit, Windows 8.1 64bit Windows 10 64bit",
       "requisitosRecomendados": "SO *: Windows 7 SP1 64bit, Windows 8.1 64bit Windows 10 64bit",
       "desarrollador": "From Software",
       "id": "ab1"
+    },
+    {
+      "nombre": "Dark Souls III",
+      "precio": "25000",
+      "categoria": "Simulacion",
+      "imagen": "https://pics.filmaffinity.com/300-177205452-large.jpg",
+      "descripcion": ".img-thumbnail {\n  width: 200px;\n  height: 200px;\n  object-fit: cover;\n}.img-thumbnail {\n  width: 200px;\n  height: 200px;\n  object-fit: cover;\n}",
+      "requisitosMinimos": ".img-thumbnail {\n  width: 200px;\n  height: 200px;\n  object-fit: cover;\n}",
+      "requisitosRecomendados": ".img-thumbnail {\n  width: 200px;\n  height: 200px;\n  object-fit: cover;\n}",
+      "desarrollador": "From Software",
+      "id": "keaqZUY"
     }
   ]
 }
