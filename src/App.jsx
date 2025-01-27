@@ -6,24 +6,28 @@ import Inicio from './components/pages/Inicio'
 import Menu from './components/common/Menu'
 import AcercaNosotros from './components/pages/AcercaNosotros'
 import Login from './components/pages/Login'
-import Administrador from './components/pages/Administrador'
 import DetalleJuego from './components/pages/DetalleJuego'
 import Error404 from './components/pages/Error404'
-import FormularioJuegos from './components/pages/FormularioJuegos'
+import ProtectorRutas from './components/routes/ProtectorRutas'
+import RutasAdmin from './components/routes/RutasAdmin'
+import { useState } from 'react'
 
 function App() {
+  const usuario = JSON.parse(sessionStorage.getItem('userKey')) || ""
+  const [usuarioLogueado, setUsuarioLogueado] = useState(usuario)
+
   return (
     <>
       <BrowserRouter>
-        <Menu></Menu>
+        <Menu usuarioLogueado={usuarioLogueado} setUsuarioLogueado={setUsuarioLogueado}></Menu>
         <Routes>
           <Route path='/' element={<Inicio></Inicio>}></Route> 
           <Route path='/acerca-de-nosotros' element={<AcercaNosotros></AcercaNosotros>}></Route> 
-          <Route path='/login' element={<Login></Login>}></Route> 
-          <Route path='/detalle-juego' element={<DetalleJuego></DetalleJuego>}></Route> 
-          <Route path='/administrador' element={<Administrador></Administrador>}></Route>
-          <Route exact path='/administrador/crear' element={<FormularioJuegos crearJuego={true}></FormularioJuegos>}></Route> 
-          <Route exact path='/administrador/editar/:id' element={<FormularioJuegos crearJuego={false}></FormularioJuegos>}></Route> 
+          <Route path='/detalle-juego/:id' element={<DetalleJuego></DetalleJuego>}></Route> 
+          <Route path='/login' element={<Login setUsuarioLogueado={setUsuarioLogueado}></Login>}></Route>
+          <Route path='/administrador/*' element={<ProtectorRutas>
+            <RutasAdmin></RutasAdmin>
+          </ProtectorRutas>}></Route>
           <Route path='*' element={<Error404></Error404>}></Route>
         </Routes>
         <Footer></Footer>

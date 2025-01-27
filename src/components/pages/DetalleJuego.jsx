@@ -1,5 +1,6 @@
 import React from "react";
-import { obtenerProductoAPI } from "../helpers/queries";
+import { obtenerUnSoloJuegoAPI } from "../helpers/queries";
+
 const DetalleJuego = () => {
   const { id } = useParams();
   const [producto, setProducto] = useState({});
@@ -9,7 +10,7 @@ const DetalleJuego = () => {
   }, []);
 
   const obtenerProducto = async () => {
-    const respuesta = await obtenerProductoAPI(id);
+    const respuesta = await obtenerUnSoloJuegoAPI(id);
     if (respuesta.status === 200) {
       const datos = await respuesta.json();
       setProducto(datos);

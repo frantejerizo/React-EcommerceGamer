@@ -1,6 +1,5 @@
 .bg-blanco {
-  
-  width: 100%; 
+  width: 100%;
 
   padding: 10px;
 
@@ -32,68 +31,60 @@
 }
 
 .bg-azul {
-    color: #08152e;
-    -webkit-text-stroke: 0.2px black; 
-   
-    font-weight: bold;
+  color: #08152e;
+  -webkit-text-stroke: 0.2px black;
+
+  font-weight: bold;
 }
 
 .bg-verde {
-    color: #12d8a0;
-    
-  
-    
+  color: #12d8a0;
 }
 
 .link-success {
-    font-weight: bold;
-    font-size: 1.2rem; 
-    
-  }
+  font-weight: bold;
+  font-size: 1.2rem;
+}
 
+.nav-link {
+  background-color: #ffffff;
+  border: 1px solid rgb(209, 213, 219);
+  border-radius: 0.5rem;
+  color: #111827;
+  font-size: 0.875rem;
+  font-weight: bold;
+  line-height: 1.25rem;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease; /* Transición suave para todos los cambios */
+}
 
+.nav-link:hover {
+  background-color: #f9fafb; /* Cambio de color de fondo */
+  transform: translateY(-2px); /* Efecto de elevación */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+}
 
+.nav-link:active {
+  transform: translateY(0); /* Vuelve a la posición original al hacer clic */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra más suave al hacer clic */
+}
 
+.nav-link.link-success {
+  color: #12d8a0; /* Color verde para los enlaces */
+}
 
-  .nav-link {
-    background-color: #ffffff;
-    border: 1px solid rgb(209, 213, 219);
-    border-radius: 0.5rem;
-    color: #111827;
-    font-size: 0.875rem;
-    font-weight: bold;
-    line-height: 1.25rem;
-    padding: 0.75rem 1rem;
-    text-align: center;
-    -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    cursor: pointer;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-user-select: none;
-    -ms-touch-action: manipulation;
-    touch-action: manipulation;
-    text-decoration: none;
-    display: inline-block;
-    transition: all 0.3s ease; /* Transición suave para todos los cambios */
-  }
-  
-  .nav-link:hover {
-    background-color: #f9fafb; /* Cambio de color de fondo */
-    transform: translateY(-2px); /* Efecto de elevación */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
-  }
-  
-  .nav-link:active {
-    transform: translateY(0); /* Vuelve a la posición original al hacer clic */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra más suave al hacer clic */
-  }
-  
-  .nav-link.link-success {
-    color: #12d8a0; /* Color verde para los enlaces */
-  }
-  
-  .nav-link.link-success:hover {
-    color: #0fa67d; /* Cambia el color al pasar el mouse */
-  }
+.nav-link.link-success:hover {
+  color: #0fa67d; /* Cambia el color al pasar el mouse */
+}
