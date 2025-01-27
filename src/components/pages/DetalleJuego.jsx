@@ -14,7 +14,7 @@ const DetalleJuego = () => {
       const datos = await respuesta.json();
       setProducto(datos);
     } else {
-      alert("Ocurrio un error intente este paso en unos minutos");
+      alert("Ocurrió un error, intente de nuevo en unos segundos");
     }
   };
 
