@@ -43,11 +43,11 @@ const AcercaNosotros = () => {
           <div className="border border-4 rounded-circle mb-3 border-danger">
             <img
               className="w-100 h-100 rounded-circle"
-              src="https://ca.slack-edge.com/THQU1MGPN-U072TE91Z9P-g149c548c3e7-512"
+              src="https://media-eze1-1.cdn.whatsapp.net/v/t61.24694-24/425330636_944257843706827_1808915034332431891_n.jpg?ccb=11-4&oh=01_Q5AaICyJtLiAPejDK6XSaqBQ_mNXoFduNcQzSoWaOynpXdqv&oe=67A4F8D1&_nc_sid=5e03e0&_nc_cat=111"
               alt="Integrante del grupo"
             />
           </div>
-          <h5 className="text-center text-danger">Matias Sanchez</h5>
+          <h5 className="text-center text-danger">José Ignacio Ramón</h5>
           <p className="lead">
             Encargado de realizar slider y categorias del index, pagina de
             Contacto, pagina de Registro usuario y carrito de compras.
@@ -58,11 +58,11 @@ const AcercaNosotros = () => {
           <div className="border border-4 rounded-circle mb-3 border-success">
             <img
               className="w-100 h-100 rounded-circle"
-              src="https://ca.slack-edge.com/THQU1MGPN-U06QYJ3LB5Z-gd480f7b81d4-512"
+              src="https://media-eze1-1.cdn.whatsapp.net/v/t61.24694-24/265410653_297826692471792_1097634916994082370_n.jpg?ccb=11-4&oh=01_Q5AaIG82C1pzfySiW8IgT9ODbjLrYFvQIFB-MqK6mnEzs844&oe=679D9C64&_nc_sid=5e03e0&_nc_cat=100"
               alt="Integrante del grupo"
             />
           </div>
-          <h5 className="text-center text-success">Santiago Paez</h5>
+          <h5 className="text-center text-success">Tomas Pando</h5>
           <p className="lead">
             Encargado de realizar las publicidades en la pagina principal y la
             grilla con promociones.
@@ -73,11 +73,11 @@ const AcercaNosotros = () => {
           <div className="border border-4 rounded-circle mb-3 border-warning">
             <img
               className="w-100 h-100 rounded-circle"
-              src="https://ca.slack-edge.com/THQU1MGPN-U06BNCPCSG0-0b7cee8723c4-512"
+              src="https://media-eze1-1.cdn.whatsapp.net/v/t61.24694-24/57156680_588106471694853_5564464164459511808_n.jpg?ccb=11-4&oh=01_Q5AaIHycmqghUw-jTitIjNxOIyQIgMKNQucrw8-4lSvLcHs2&oe=67A5079A&_nc_sid=5e03e0&_nc_cat=104"
               alt="Integrante del grupo"
             />
           </div>
-          <h5 className="text-center text-warning">Eliseo Urueña</h5>
+          <h5 className="text-center text-warning">Juan Stegmayer</h5>
           <p className="lead">
             Encargado de realizar pagina del detalle de categoria y detalle de
             productos.
