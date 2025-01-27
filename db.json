@@ -10,18 +10,6 @@
       "requisitosRecomendados": "SO *: Windows 7 SP1 64bit, Windows 8.1 64bit Windows 10 64bit",
       "desarrollador": "From Software",
       "id": "ab1"
-    },
-    {
-      "nombre": "dark souls 2",
-      "precio": "1223",
-      "categoria": "SoulsLike",
-      "imagen": "https://pics.filmaffinity.com/300-177205452-large.jpg",
-      "descripcion": "exact pathexact pathexact pathexact path",
-      "requisitosMinimos": "exact pathexact pathexact path",
-      "requisitosRecomendados": "exact pathexact path",
-      "desarrollador": "exact path",
-      "id": "8EZ_MBQ"
     }
-    
   ]
 }
