@@ -34,8 +34,7 @@ const AcercaNosotros = () => {
           </div>
           <h5 className="text-center text-primary">Tejerizo Francisco</h5>
           <p className="lead">
-            Encargado de dirección general del proyecto, realizar navbar,
-            footer, pagina sobreNosotros, modal de Login y pagina de error404.
+            Footer, Navbar, FormularioJuegos, estructura del proyecto, README, login, error404, hotfix general del proyecto.
           </p>
         </Col>
 
@@ -49,8 +48,7 @@ const AcercaNosotros = () => {
           </div>
           <h5 className="text-center text-danger">José Ignacio Ramón</h5>
           <p className="lead">
-            Encargado de realizar slider y categorias del index, pagina de
-            Contacto, pagina de Registro usuario y carrito de compras.
+            CarrouselInicio, CatalogoJuegos, JuegoInicio, estetica de la pagina (colores, e imagenes).
           </p>
         </Col>
 
@@ -64,8 +62,7 @@ const AcercaNosotros = () => {
           </div>
           <h5 className="text-center text-success">Tomas Pando</h5>
           <p className="lead">
-            Encargado de realizar las publicidades en la pagina principal y la
-            grilla con promociones.
+            Administrador, JuegoAdministrador.
           </p>
         </Col>
 
@@ -79,8 +76,7 @@ const AcercaNosotros = () => {
           </div>
           <h5 className="text-center text-warning">Juan Stegmayer</h5>
           <p className="lead">
-            Encargado de realizar pagina del detalle de categoria y detalle de
-            productos.
+            DetalleJuego, AcercaNosotros.
           </p>
         </Col>
       </Row>

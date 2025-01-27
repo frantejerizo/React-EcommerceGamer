@@ -13,11 +13,12 @@ const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
     reset,
     setValue,
   } = useForm();
-  
+
   const navegacion = useNavigate()
 
   const onSubmit = (busqueda) => {
-    console.log(busqueda);
+    alert('No se encontró el juego ingresado')
+    reset()
   };
 
   const logout = () => {

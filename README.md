@@ -94,8 +94,8 @@ Sigue estos pasos para instalar y ejecutar el proyecto localmente:
 
 Este proyecto fue desarrollado por el equipo:
 
-- **Tejerizo Francisco**: Footer, Navbar, FormularioJuegos, estructura del proyecto, README, hotfix general del proyecto.
-- **José Ignacio Ramón**: CarrouselInicio, CatalogoJuegos, JuegoInicio.
+- **Tejerizo Francisco**: Footer, Navbar, FormularioJuegos, estructura del proyecto, README, login, error404, hotfix general del proyecto.
+- **José Ignacio Ramón**: CarrouselInicio, CatalogoJuegos, JuegoInicio, estetica de la pagina (colores, e imagenes).
 - **Tomas Pando**: Administrador, JuegoAdministrador.
 - **Juan Stegmayer**: DetalleJuego, AcercaNosotros.
 
