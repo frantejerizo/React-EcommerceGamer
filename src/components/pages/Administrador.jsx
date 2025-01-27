@@ -1,47 +1,62 @@
-import React, { useState, useEffect } from 'react';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
-import { PlusCircle } from "react-bootstrap-icons";
-import AdministrarJuegos from './juego/AdministrarJuegos';
-import { useNavigate } from "react-router-dom";
-import { crearJuegoAPI, obtenerUnSoloJuegoAPI, editarJuegoAPI } from "../helpers/queries";
+import React, { useEffect, useState } from "react";
+import { Table } from "react-bootstrap";
+import { FileEarmarkPlus } from "react-bootstrap-icons";
+import { Link } from "react-router";
+import { listarJuegosAPI } from "../helpers/queries";
+import JuegoAdministrador from "./juego/JuegoAdministrador";
 
 const Administrador = () => {
-  const [videojuegos, setVideojuegos] = useState([]);
-  const [nuevoNombre, setNuevoNombre] = useState("");
-  const navigate = useNavigate();
+  const [listaJuegos, setListaJuegos] = useState([]);
 
   useEffect(() => {
-    const cargarJuegos = async () => {
-      const juego = await obtenerUnSoloJuegoAPI();
-      setVideojuegos(juego);
-    };
-    cargarJuegos();
+    consultarAPI();
   }, []);
 
-  const handleAgregarJuego = () => {
-    navigate('/administrador/crear');
-  }
+  const consultarAPI = async () => {
+    const respuesta = await listarJuegosAPI();
+    if (respuesta.status === 200) {
+      const datos = await respuesta.json();
+      setListaJuegos(datos);
+    } else {
+      alert(
+        "Ha ocurrido un error, vuelve a intentar esta operacion en unos momentos"
+      );
+    }
+  };
 
-    
-  
-  
-    return (
-        <section className='mainSection mb-4'>
-            <h1 className='text-center mt-5'>Agregar videojuego</h1>
-            
-            <Form className='container d-flex'>       
-      <Form.Group className="w-100" controlId="exampleForm.ControlInput1">
-        <Form.Control type="text" placeholder="Agregar videojuego" value={nuevoNombre} onChange={(e) => setNuevoNombre(e.target.value)}/>
-      </Form.Group>
-      <Button variant="primary" type="submit" onClick={handleAgregarJuego}>
-      <PlusCircle></PlusCircle>
-      </Button>
-    </Form>
-    <AdministrarJuegos videojuegos={videojuegos} setVideojuegos={setVideojuegos}/>
-   
-        </section>
-    );
-  }
+  return (
+    <section className="container mainSection">
+      <div className="d-flex justify-content-between align-items-center mt-5">
+        <h1 className="display-4">Juegos disponibles</h1>
+        <Link className="btn btn-primary" to={"/administrador/crear"}>
+          <FileEarmarkPlus></FileEarmarkPlus>
+        </Link>
+      </div>
+      <hr />
+      <Table responsive striped bordered hover>
+        <thead>
+          <tr className="text-center">
+            <th>Cod</th>
+            <th>Nombre de Juego</th>
+            <th>Precio</th>
+            <th>Categoria</th>
+            <th>Imagen</th>
+            <th>Desarrollador</th>
+            <th>Opciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          {listaJuegos.map((datosJuego) => (
+            <JuegoAdministrador
+              key={datosJuego.id}
+              datosJuego={datosJuego}
+              setListaJuegos={setListaJuegos}
+            ></JuegoAdministrador>
+          ))}
+        </tbody>
+      </Table>
+    </section>
+  );
+};
 
 export default Administrador;

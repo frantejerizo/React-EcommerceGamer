@@ -1,7 +1,12 @@
+// POST - crear producto - 201
+// GET - obtener 1 o mas productos - 200
+// DELETE - borrar 1 producto - 200
+// PUT/PATCH - editar 1 producto
+
 export const crearJuegoAPI = async(juegoNuevo) =>{
     try
     {
-        const respuesta = await fetch(`http://localhost:5174/juegos`,{
+        const respuesta = await fetch(`http://localhost:3000/juegos`,{
             method:"POST",
             headers:{
                 "Content-Type": "application/json"
@@ -17,40 +22,43 @@ export const crearJuegoAPI = async(juegoNuevo) =>{
     }
 }
 
-export const listarProductosAPI = async () => {
-    try {
-        // Hacemos la solicitud GET al servidor
-        const respuesta = await fetch('http://localhost:3000/juegos');
-
-        // Verificamos si la respuesta es exitosa (código 200-299)
-        if (!respuesta.ok) {
-            throw new Error(`Error al obtener los juegos: ${respuesta.statusText}`);
-        }
-
-        // Convertimos la respuesta a JSON
-        const datos = await respuesta.json();
-
-        // Devolvemos los datos parseados
-        return datos;
-    } catch (error) {
-        console.error("Error en listarProductosAPI:", error);
-        return false; // Devuelve false en caso de error
-    }
-};
-
-export const obtenerUnSoloJuegoAPI = async(id) =>{
+export const listarJuegosAPI = async() =>{
     try
     {
-        const respuesta = await fetch(`http://localhost:5174/juegos/${id}`)
-        if (respuesta.ok) {
-            const datos = await respuesta.json();
-            setVideojuegos(datos);
-        }
+        const respuesta = await fetch(`http://localhost:3000/juegos`)
         return respuesta
     }
     catch (error)
     {
-        
+        console.error(error)
+        return false
+    }
+}
+
+export const borrarJuegoAPI = async(id) =>{
+    try
+    {
+        const respuesta = await fetch(`http://localhost:3000/juegos/${id}`,{
+            method:"DELETE"
+        })
+        return respuesta
+    }
+    catch (error)
+    {
+        console.error(error)
+        return false
+    }
+}
+
+export const obtenerUnSoloJuegoAPI = async(id) =>{
+    try
+    {
+        const respuesta = await fetch(`http://localhost:3000/juegos/${id}`)
+        return respuesta
+    }
+    catch (error)
+    {
+        console.error(error)
         return false
     }
 }
@@ -58,7 +66,7 @@ export const obtenerUnSoloJuegoAPI = async(id) =>{
 export const editarJuegoAPI = async(juegoAEditar,id) =>{
     try
     {
-        const respuesta = await fetch(`http://localhost:5174/juegos/${id}`,{
+        const respuesta = await fetch(`http://localhost:3000/juegos/${id}`,{
             method:"PUT",
             headers:{
                 "Content-Type": "application/json"
@@ -74,17 +82,22 @@ export const editarJuegoAPI = async(juegoAEditar,id) =>{
     }
 }
 
-export const borrarJuegoAPI = async (id) => {
-    try {
-        
-        const respuesta = await fetch(`http://localhost:5174/juegos/${id}`, {
-            method: "DELETE",
-        });
+// usuario administrador
+const userAdmin = {
+    email: 'admin@gmail.com',
+    password: '12345678'
+}
 
-       
-        return respuesta;
-    } catch (error) {
-        console.error("Error al eliminar el videojuego:", error);
-        return false; 
+export const login = (usuario) =>
+{
+    if(usuario.email === userAdmin.email && usuario.password === userAdmin.password) 
+    {
+        // guardamos el email en el session storage para que no se desloguee navegando de pagina en pagina
+        sessionStorage.setItem('userKey',JSON.stringify(userAdmin.email))
+        return true
     }
-};
+    else
+    {
+        return false
+    }
+}

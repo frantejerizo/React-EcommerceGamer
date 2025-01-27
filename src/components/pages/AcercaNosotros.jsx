@@ -1,99 +1,86 @@
 import React from "react";
+import { Col, Row } from "react-bootstrap";
+import logoRolling from "../../assets/logo2.png"
 
 const AcercaNosotros = () => {
   return (
-    <div>
-      <p class="m-2 text-center">
-        <b>The World Films</b> es una empresa líder en la industria
-        cinematográfica, dedicada a brindar experiencias inolvidables a los
-        amantes del séptimo arte. Con una amplia trayectoria en el sector,
-        nuestra misión es convertir cada visita a nuestros cines en un momento
-        único, combinando la magia del cine con la comodidad y tecnología de
-        vanguardia. En <b>The World Films</b>, creemos que el cine es más que
-        entretenimiento: es una forma de arte que inspira, emociona y conecta a
-        las personas. Por ello, nos esforzamos en ofrecer una experiencia
-        completa, desde la selección de las películas más aclamadas y esperadas,
-        hasta la creación de espacios cómodos y modernos donde nuestros
-        espectadores puedan disfrutar al máximo. Por que en The World Films
-        encontraras..
+    <section className="container">
+      <h1 className="border-bottom border-black text-center p-3">
+        ¿Quienes somos?
+      </h1>
+
+      <div className="d-flex justify-content-center">
+        <img
+          src={logoRolling}
+          alt="logo rollingcodeschool"
+        />
+      </div>
+
+      <p className="text-center mb-5 lead">
+        Somos estudiantes de RollingCode School, que conformamos un grupo de 4
+        integrantes para poner en practica lo aprendido en clases sobre las operaciones CRUD, empleando React y una API local.
+        <br />
+        <b>PlayZone</b> es un sitio web desarrollado con React que ofrece un catálogo de juegos para la venta. Este proyecto implementa las operaciones básicas de CRUD (Crear, Leer, Actualizar, Borrar) para gestionar los juegos y proporciona una experiencia responsive y accesible para los usuarios. 
       </p>
-      <section class="container-2 rounded-4 ">
-        <h1 class="">Quienes Somos</h1>
-        <section class="d-flex flex-column  align-items-center flex-wrap m-2">
-          <article class="integrante1 row w-75 d-flex align-items-center m-2  ">
-            <div class="col-md-6 text-end"></div>
-            <div class="col-md-6 text-end">
-              <h3>Alejo Fernandez</h3>
-              <p>
-                Tengo 18 años y soy responsable de la Busqueda de Informacion de
-                la pagina, mis tareas como Desarrollador fueron: main sobre
-                nosotros, main categoria de pelicula y navbar cartelera
-              </p>
-              <p class="card-text text-light">
-                <small class="text-body-light">Tucuman-Argentina</small>
-              </p>
-            </div>
-          </article>
-          <article class="integrante2 row w-75 d-flex align-items-center m-2">
-            <div class="col-md-6 text-start">
-              <h3>Tobias Morienega</h3>
-              <p>
-                De 20 años y estoy a cargo del Contenido Audiovisual de la
-                pagina, como desarrollador trabaje sobre: el main detalle de
-                pelicula, navbar gratis y pagina inicio de sesion.
-              </p>
-              <p class="card-text text-light">
-                <small class="text-body-light">Tucuman-Argentina</small>
-              </p>
-            </div>
-            <div class="col-md-6 text-start"></div>
-          </article>
-          <article class="integrante1 row w-75 d-flex align-items-center m-2  ">
-            <div class="col-md-6 text-end"></div>
-            <div class="col-md-6 text-end">
-              <h3>Martin Calvimonte</h3>
-              <p>
-                Al dia de hoy tengo 36 años y me desempeñe tanto de Product
-                Owner como asi tambien de Scraum Master, de Desarrollador
-                realice las tareas: de main prueba gratis, carrusell y footer.
-              </p>
-              <p class="card-text text-light">
-                <small class="text-body-light">Cordoba-Argentina</small>
-              </p>
-            </div>
-          </article>
-          <article class="integrante4 row w-75 d-flex align-items-center m-2">
-            <div class="col-md-6 text-start">
-              <h3>Jose Manuel Carrasco</h3>
-              <p>
-                Con 26 años, soy el encargado del control de versiones en Git
-                GitHub y de subir la pagina a Netlify, mi trabajo de
-                Desarrollador fue: el main contacto, main detalle de pelicula y
-                pagina index.
-              </p>
-              <p class="card-text text-light">
-                <small class="text-body-light">Madrid-España</small>
-              </p>
-            </div>
-            <div class="col-md-6 text-start"></div>
-          </article>
-          <article class="integrante1 row w-75 d-flex align-items-center m-2 ">
-            <div class="col-md-6 text-end"></div>
-            <div class="col-md-6 text-end">
-              <h3>Juan Andres Stegmayer</h3>
-              <p>
-                Soy un joven de 27 años, responsable del Diseño de la Pagina,
-                ahora como Desarrollador trabaje sobre: el main registro, main
-                cartelera y navbar registro.
-              </p>
-              <p class="card-text ">
-                <small class="text-body-light">Tucuman-Argentina</small>
-              </p>
-            </div>
-          </article>
-        </section>
-      </section>
-    </div>
+
+      <Row className="my-3">
+        <Col md={6} sm={12} lg={3}>
+          <div className="border border-4 rounded-circle mb-3 border-primary">
+            <img
+              className="w-100 h-100 rounded-circle"
+              src="https://ca.slack-edge.com/THQU1MGPN-U070XEBEG04-f13f235efc55-512"
+              alt="Integrante del grupo"
+            />
+          </div>
+          <h5 className="text-center text-primary">Tejerizo Francisco</h5>
+          <p className="lead">
+            Footer, Navbar, FormularioJuegos, estructura del proyecto, README, login, error404, hotfix general del proyecto.
+          </p>
+        </Col>
+
+        <Col md={6} sm={12} lg={3}>
+          <div className="border border-4 rounded-circle mb-3 border-danger">
+            <img
+              className="w-100 h-100 rounded-circle"
+              src="https://media-eze1-1.cdn.whatsapp.net/v/t61.24694-24/425330636_944257843706827_1808915034332431891_n.jpg?ccb=11-4&oh=01_Q5AaICyJtLiAPejDK6XSaqBQ_mNXoFduNcQzSoWaOynpXdqv&oe=67A4F8D1&_nc_sid=5e03e0&_nc_cat=111"
+              alt="Integrante del grupo"
+            />
+          </div>
+          <h5 className="text-center text-danger">José Ignacio Ramón</h5>
+          <p className="lead">
+            CarrouselInicio, CatalogoJuegos, JuegoInicio, estetica de la pagina (colores, e imagenes).
+          </p>
+        </Col>
+
+        <Col md={6} sm={12} lg={3}>
+          <div className="border border-4 rounded-circle mb-3 border-success">
+            <img
+              className="w-100 h-100 rounded-circle"
+              src="https://media-eze1-1.cdn.whatsapp.net/v/t61.24694-24/265410653_297826692471792_1097634916994082370_n.jpg?ccb=11-4&oh=01_Q5AaIG82C1pzfySiW8IgT9ODbjLrYFvQIFB-MqK6mnEzs844&oe=679D9C64&_nc_sid=5e03e0&_nc_cat=100"
+              alt="Integrante del grupo"
+            />
+          </div>
+          <h5 className="text-center text-success">Tomas Pando</h5>
+          <p className="lead">
+            Administrador, JuegoAdministrador.
+          </p>
+        </Col>
+
+        <Col md={6} sm={12} lg={3}>
+          <div className="border border-4 rounded-circle mb-3 border-warning">
+            <img
+              className="w-100 h-100 rounded-circle"
+              src="https://media-eze1-1.cdn.whatsapp.net/v/t61.24694-24/57156680_588106471694853_5564464164459511808_n.jpg?ccb=11-4&oh=01_Q5AaIHycmqghUw-jTitIjNxOIyQIgMKNQucrw8-4lSvLcHs2&oe=67A5079A&_nc_sid=5e03e0&_nc_cat=104"
+              alt="Integrante del grupo"
+            />
+          </div>
+          <h5 className="text-center text-warning">Juan Stegmayer</h5>
+          <p className="lead">
+            DetalleJuego, AcercaNosotros.
+          </p>
+        </Col>
+      </Row>
+    </section>
   );
 };
 

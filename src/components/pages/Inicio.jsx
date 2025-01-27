@@ -7,7 +7,6 @@ const Inicio = () => {
         <div className='mainSection'>
             <CarrouselInicio></CarrouselInicio>
             <CatalogoJuegos></CatalogoJuegos>
-            
         </div>
     );
 };
