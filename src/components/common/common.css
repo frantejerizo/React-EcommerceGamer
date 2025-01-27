@@ -88,3 +88,8 @@
 .nav-link.link-success:hover {
   color: #0fa67d; /* Cambia el color al pasar el mouse */
 }
+
+.fondoFooterInferior
+{
+  background-color:#929292;
+}

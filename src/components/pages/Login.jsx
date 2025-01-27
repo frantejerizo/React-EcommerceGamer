@@ -24,9 +24,8 @@ const Login = ({ setUsuarioLogueado }) => {
   };
 
   return (
-    <section className="mainSection align-content-center">
-      <Container>
-        <Card>
+    <section className="mainSection container my-5">
+        <Card className="bg-light w-100">
           <Card.Body>
             <div>
               <Card.Title>Login</Card.Title>
@@ -82,7 +81,6 @@ const Login = ({ setUsuarioLogueado }) => {
             </Form>
           </Card.Body>
         </Card>
-      </Container>
     </section>
   );
 };

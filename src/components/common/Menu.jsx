@@ -5,7 +5,7 @@ import { Link, NavLink, useNavigate } from "react-router";
 import logo from "../../assets/logo.png";
 import "./common.css";
 
-const Menu = ({usuarioLogueado,setUsuarioLogueado}) => {
+const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
   const {
     register,
     handleSubmit,
@@ -38,23 +38,33 @@ const Menu = ({usuarioLogueado,setUsuarioLogueado}) => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <NavLink end className="nav-link link-success " to={"/"}>
+            <NavLink end className="nav-link link-success" to={"/"}>
               Inicio
             </NavLink>
             <NavLink
               end
-              className="nav-link link-success ms-1 "
+              className="nav-link link-success ms-2"
               to={"/acerca-de-nosotros"}
             >
               Sobre Nosotros
             </NavLink>
-            <NavLink
-              end
-              className="nav-link me-3 link-success ms-1 "
-              to={"/login"}
-            >
-              Login
-            </NavLink>
+
+            {usuarioLogueado.length > 0 ? (
+              <>
+                <NavLink end className="nav-link link-success ms-2" to={"/administrador"}>
+                  Administrador
+                </NavLink>
+                <Button className="nav-link link-success mx-2" variant="success" onClick={logout}>
+                  Logout
+                </Button>
+              </>
+            ) : (
+              <>
+                <NavLink end className="nav-link link-success mx-2" to={"/login"}>
+                  Login
+                </NavLink>
+              </>
+            )}
 
             <Form className="d-flex mt-1" onSubmit={handleSubmit(onSubmit)}>
               <Form.Group>
