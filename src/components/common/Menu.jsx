@@ -17,7 +17,7 @@ const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
   const navegacion = useNavigate();
 
   const onSubmit = (busqueda) => {
-    alert('No se encontró el juego ingresado');
+    alert("No se encontró el juego ingresado");
     reset();
   };
 
@@ -31,11 +31,7 @@ const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
     <Navbar expand="lg" className="navbar-custom">
       <Container fluid>
         <Link to={"/"} className="navbar-brand">
-          <img
-            src={logo}
-            alt="logo ecommerce gamer"
-            className="navbar-logo"
-          />
+          <img src={logo} alt="logo ecommerce gamer" className="navbar-logo" />
         </Link>
         <Navbar.Toggle aria-controls="navbar-nav" className="navbar-toggle" />
         <Navbar.Collapse id="navbar-nav">
@@ -52,7 +48,11 @@ const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
                 <NavLink end className="nav-link" to={"/administrador"}>
                   Administrador
                 </NavLink>
-                <Button className="nav-link logout-button" variant="" onClick={logout}>
+                <Button
+                  className="nav-link logout-button"
+                  variant=""
+                  onClick={logout}
+                >
                   Logout
                 </Button>
               </>
@@ -62,7 +62,10 @@ const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
               </NavLink>
             )}
 
-            <Form className="d-flex search-form" onSubmit={handleSubmit(onSubmit)}>
+            <Form
+              className="d-flex search-form"
+              onSubmit={handleSubmit(onSubmit)}
+            >
               <Form.Group className="search-group">
                 <Form.Control
                   type="text"
