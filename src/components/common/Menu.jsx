@@ -14,11 +14,11 @@ const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
     setValue,
   } = useForm();
 
-  const navegacion = useNavigate()
+  const navegacion = useNavigate();
 
   const onSubmit = (busqueda) => {
-    alert('No se encontró el juego ingresado')
-    reset()
+    alert('No se encontró el juego ingresado');
+    reset();
   };
 
   const logout = () => {
@@ -28,76 +28,66 @@ const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
   };
 
   return (
-    <Navbar expand="lg" className="colorPrimario bg-blanco">
-      <Container>
+    <Navbar expand="lg" className="navbar-custom">
+      <Container fluid>
         <Link to={"/"} className="navbar-brand">
           <img
             src={logo}
             alt="logo ecommerce gamer"
-            className="img-fluid"
-            width={"50px"}
+            className="navbar-logo"
           />
         </Link>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
-            <NavLink end className="nav-link link-success" to={"/"}>
+        <Navbar.Toggle aria-controls="navbar-nav" className="navbar-toggle" />
+        <Navbar.Collapse id="navbar-nav">
+          <Nav className="ms-auto align-items-center">
+            <NavLink end className="nav-link" to={"/"}>
               Inicio
             </NavLink>
-            <NavLink
-              end
-              className="nav-link link-success ms-2"
-              to={"/acerca-de-nosotros"}
-            >
+            <NavLink end className="nav-link" to={"/acerca-de-nosotros"}>
               Sobre Nosotros
             </NavLink>
 
             {usuarioLogueado.length > 0 ? (
               <>
-                <NavLink end className="nav-link link-success ms-2" to={"/administrador"}>
+                <NavLink end className="nav-link" to={"/administrador"}>
                   Administrador
                 </NavLink>
-                <Button className="nav-link link-success mx-2" variant="" onClick={logout}>
+                <Button className="nav-link logout-button" variant="" onClick={logout}>
                   Logout
                 </Button>
               </>
             ) : (
-              <>
-                <NavLink end className="nav-link link-success mx-2" to={"/login"}>
-                  Login
-                </NavLink>
-              </>
+              <NavLink end className="nav-link" to={"/login"}>
+                Login
+              </NavLink>
             )}
 
-            <Form className="d-flex mt-1" onSubmit={handleSubmit(onSubmit)}>
-              <Form.Group>
+            <Form className="d-flex search-form" onSubmit={handleSubmit(onSubmit)}>
+              <Form.Group className="search-group">
                 <Form.Control
                   type="text"
                   placeholder="Buscar Juego"
+                  className="search-input"
                   {...register("busquedaJuego", {
-                    required: "Ingresa algun juego para buscarlo",
+                    required: "Ingresa algún juego para buscarlo",
                     minLength: {
                       value: 2,
-                      message: "Debe ingresar como minimo 2 caracteres",
+                      message: "Debe ingresar como mínimo 2 caracteres",
                     },
                     maxLength: {
                       value: 50,
-                      message:
-                        "Debe ingresar como maximo 50 caracteres inclusive",
+                      message: "Debe ingresar como máximo 50 caracteres",
                     },
                   })}
-                ></Form.Control>
-                <Form.Text className="text-danger">
-                  {errors.busquedaJuego?.message}
-                </Form.Text>
+                />
+                {errors.busquedaJuego && (
+                  <Form.Text className="text-danger">
+                    {errors.busquedaJuego.message}
+                  </Form.Text>
+                )}
               </Form.Group>
-              <Button
-                type="submit"
-            
-                className="custom-search-button"
-                
-              >
-                <Search></Search>
+              <Button type="submit" className="search-button">
+                <Search className="search-icon" />
               </Button>
             </Form>
           </Nav>

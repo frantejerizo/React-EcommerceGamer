@@ -1,16 +1,15 @@
 .container-catalogo {
-  /* Basic dimensions and centering */
-  width: 100%; /* Ocupa el 100% del ancho disponible */
-  max-width: 1200px; /* Limita el ancho máximo para pantallas grandes */
-  margin: 20px auto; /* Centra el contenedor horizontalmente */
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
   margin-bottom: 50px;
   padding: 10px;
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap; /* Permite que los elementos internos se ajusten en varias filas */
-  gap: 10px; /* Espacio entre los elementos internos */
+  flex-wrap: wrap;
+  gap: 10px;
 
   width: 100%;
   height: 100%;
@@ -39,18 +38,17 @@
   background-size: calc(1.732 * var(--s)) var(--s);
 }
 
-/* Media Queries para ajustes responsivos */
 @media (max-width: 768px) {
   .container-catalogo {
-    padding: 5px; /* Reducir el padding en pantallas pequeñas */
-    gap: 5px; /* Reducir el espacio entre elementos */
+    padding: 5px;
+    gap: 5px;
     justify-content: center;
   }
 }
 
 @media (max-width: 480px) {
   .container-catalogo {
-    margin: 5px auto; /* Reducir el margen en pantallas muy pequeñas */
+    margin: 5px auto;
     padding: 5px;
     gap: 5px;
     justify-content: center;

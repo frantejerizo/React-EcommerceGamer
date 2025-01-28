@@ -1,4 +1,4 @@
-/* Estilos generales */
+
 .about-us-container {
     padding: 2rem;
     background-color: #f8f9fa;
@@ -42,7 +42,7 @@
     margin: 0 auto 3rem;
   }
   
-  /* Estilos para los miembros del equipo */
+  
   .team-members {
     display: flex;
     flex-wrap: wrap;
@@ -85,7 +85,7 @@
     color: #6c757d;
   }
   
-  /* Colores de borde personalizados */
+  
   .border-primary {
     border-color: #12D8A0 !important;
   }
@@ -96,7 +96,7 @@
   }
   
   
-  /* Responsividad */
+  
   @media (max-width: 768px) {
     .about-us-header h1 {
       font-size: 2rem;
