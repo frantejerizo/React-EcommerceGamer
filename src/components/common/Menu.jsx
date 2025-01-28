@@ -57,7 +57,7 @@ const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
                 <NavLink end className="nav-link link-success ms-2" to={"/administrador"}>
                   Administrador
                 </NavLink>
-                <Button className="nav-link link-success mx-2" variant="success" onClick={logout}>
+                <Button className="nav-link link-success mx-2" variant="" onClick={logout}>
                   Logout
                 </Button>
               </>
@@ -93,9 +93,9 @@ const Menu = ({ usuarioLogueado, setUsuarioLogueado }) => {
               </Form.Group>
               <Button
                 type="submit"
-                variant="success"
-                className="d-flex align-items-center"
-                style={{ height: "38px" }}
+            
+                className="custom-search-button"
+                
               >
                 <Search></Search>
               </Button>

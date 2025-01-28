@@ -73,7 +73,7 @@ const Footer = () => {
         </Row>
       </section>
       <section className="fondoFooterInferior">
-        <p className="text-center m-0 lead">
+        <p className="text-center m-0 lead bg-azul">
           PlayZone 2025 &copy; Todos los derechos reservados
         </p>
       </section>

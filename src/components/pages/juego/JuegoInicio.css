@@ -34,15 +34,18 @@
   position: relative;
   z-index: 5;
   width: 100%;
-  height: 8rem;
-  background-color: var(--primary-800);
+  height: 10rem;
+  background-color: var(--bg-card);
   border-radius: 0.5rem;
+ 
 }
+
+
 
 .card-img-top-nueva {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .title {
@@ -54,7 +57,20 @@
   text-transform: capitalize;
   white-space: nowrap;
   text-overflow: ellipsis;
+  
 }
+
+.subtitle {
+  overflow: hidden;
+  width: 100%;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-transform: capitalize;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 
 .action {
   display: flex;
@@ -69,14 +85,14 @@
   color: var(--light);
 }
 
-.cart-button {
+.btn-success {
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.25rem;
   padding: 0.5rem;
-  width: 100%;
+  width: 5rem;
   background-image: var(--bg-linear);
   font-size: 0.75rem;
   font-weight: 500;
@@ -88,10 +104,8 @@
   transition: background-color 0.3s ease;
 }
 
-.cart-button:hover {
+.btn-success:hover {
   background-color: var(--primary);
 }
 
-.cart-icon {
-  width: 1rem;
-}
+

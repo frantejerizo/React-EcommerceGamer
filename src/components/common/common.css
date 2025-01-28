@@ -93,3 +93,41 @@
 {
   background-color:#929292;
 }
+
+.custom-search-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 38px;
+  padding: 0 20px;
+  background-color: #12D8A0; /* Verde moderno */
+  border: none;
+  border-radius: 8px; /* Bordes redondeados */
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.custom-search-button:hover {
+  background-color: #0fa; /* Verde más claro al hacer hover */
+  transform: translateY(-2px); /* Efecto de levitación */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+}
+
+.custom-search-button:active {
+  transform: translateY(0); /* Vuelve a su posición original al hacer clic */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.search-icon {
+  margin-right: 8px; /* Espacio entre el ícono y el texto (si lo hubiera) */
+  font-size: 18px; /* Tamaño del ícono */
+  transition: transform 0.3s ease;
+}
+
+.custom-search-button:hover .search-icon {
+  transform: scale(1.1); /* Efecto de zoom en el ícono */
+}

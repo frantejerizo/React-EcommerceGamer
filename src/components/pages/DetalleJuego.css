@@ -1,0 +1,131 @@
+.detalle-juego-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: #e9ecef;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .header h1 {
+    font-size: 3rem;
+    color: #08152e;
+    -webkit-text-stroke: 0.2px black;
+  }
+  
+  .main-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .image-section {
+    flex: 1 1 300px;
+  }
+  
+  .card-img-custom {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 0.5rem;
+  }
+  
+  .description-section {
+    flex: 2 1 400px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 2px solid #dee2e6;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .description-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #495057;
+  }
+  
+  .details-section {
+    flex: 1 1 300px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 2px solid #dee2e6;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .details-section .price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #12D8A0;
+    text-align: center;
+  }
+  
+  .details-section .underline {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  
+  .btn-comprar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 10px;
+    background-image: linear-gradient(0deg, #12D8A0 70%, #d9d9d9 125%);
+    color: #0A1F4D;
+    border: 2px solid hsla(262, 83%, 58%, 0.5);
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+
+  .btn-comprar:hover {
+    transform: scale(1.05);
+    background-color: #0fa; /* Cambia el color al hacer hover */
+  }
+
+  
+  .requirements-section {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 2px solid #dee2e6;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .requirements-section h2 {
+    font-size: 1.5rem;
+    color: #343a40;
+    margin-bottom: 20px;
+  }
+  
+  .requirements-section .col {
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 0.5rem;
+    margin: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .main-content {
+      flex-direction: column;
+    }
+  
+    .header h1 {
+      font-size: 2rem;
+    }
+  
+    .description-section, .details-section {
+      flex: 1 1 auto;
+    }
+  }
+        
